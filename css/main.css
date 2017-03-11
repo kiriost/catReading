@@ -149,9 +149,10 @@ input::-webkit-input-placeholder{  /*改变搜索框内默认颜色*/
 .book-ul{
 	padding: 34px;
 	border-bottom: 4px solid #DDDDDD;
+	overflow: hidden;
 }
 .bookImg{
-    display: inline-block;
+    position: absolute;
     width: 19rem;
     height: 26.6rem;
     margin-right: 2%;
@@ -162,7 +163,8 @@ input::-webkit-input-placeholder{  /*改变搜索框内默认颜色*/
 }
 .book-cell{
 	overflow: hidden;
-	display: inline-block;
+	position: relative;
+	left: 21rem;
 	width: 70%;
 }
 .book-title {
@@ -236,8 +238,4 @@ input::-webkit-input-placeholder{  /*改变搜索框内默认颜色*/
 
 .shiyan{
 	font-size: 50px;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> a9b11a9669c654bed3fc8e198d3de6d7c2e8674c
