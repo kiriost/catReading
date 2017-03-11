@@ -2,9 +2,6 @@
 html{
 	font-size: 10px;
 }
-body{
-	font-size: 1rem;
-}
 .header{
 	width: 100%;
 }
@@ -26,7 +23,7 @@ body{
 	width: 24%;
 	height: 164px;
 	color: #FFF;
-	font-size: 4.3rem;
+	font-size: 43px;
 	text-align: center;
 	line-height: 164px;
 	font-family: "微软雅黑";
@@ -99,7 +96,7 @@ input::-webkit-input-placeholder{  /*改变搜索框内默认颜色*/
 /*图片展示区*/
 .showImg{
 	width: 100%;
-	font-size: 4.1em;
+	font-size: 41px;
 	text-align: center;
 }
 .showImg a{
@@ -124,22 +121,24 @@ input::-webkit-input-placeholder{  /*改变搜索框内默认颜色*/
     height: 130px;
     border-top: 3px solid #E53935;
     border-bottom: 3px solid #EFEFEF;
+    position: relative;
 }
 .module-header-l{
-	float: left;
+	position: absolute;
 }
-.module-title {
+.module-header-l h3{
     font-family: "微软雅黑";
     display: inline;
     color: #E53935;
-    font-size: 4.5em;
+    font-size: 45px;
     font-weight: 400;
     line-height: 130px;
     background: url(../img/icon/hot.jpg) no-repeat 33px;
     padding-left: 104px;
 }
 .module-header-r{
-	float: right;
+	position: absolute;
+	right: 0;
 }
 .module-header-r a{
 	display: block;
@@ -152,25 +151,26 @@ input::-webkit-input-placeholder{  /*改变搜索框内默认颜色*/
 	border-bottom: 4px solid #DDDDDD;
 }
 .bookImg{
-	font-size: 0;
-    float: left;
+    display: inline-block;
     width: 19rem;
     height: 26.6rem;
-    margin-right: 2.5rem;
+    margin-right: 2%;
     box-shadow: 0 1px 3px rgba(0,0,0,.3);
 }
 .book-cell{
 	overflow: hidden;
+	display: inline-block;
+	width: 70%;
 }
 .book-title {
-	font-size: 4.8rem;
+	font-size: 48px;
 	color: #313031;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
 .book-desc {
-    font-size: 4.3rem;
+    font-size: 43px;
     font-family: "微软雅黑";
     line-height: 5.1rem;
     overflow: hidden;
@@ -182,7 +182,7 @@ input::-webkit-input-placeholder{  /*改变搜索框内默认颜色*/
     -webkit-line-clamp: 2;
 }
 .book-meta{
-	font-size: 3.6rem;
+	font-size: 36px;
 	overflow: hidden;
 }
 .book-meta-l{
@@ -207,7 +207,7 @@ input::-webkit-input-placeholder{  /*改变搜索框内默认颜色*/
 	margin-bottom: 2.5rem;
 }
 .book-list{
-	font-size: 4.3rem;
+	font-size: 43px;
 	line-height: 102px;
 	text-overflow: ellipsis;
     white-space: nowrap;
@@ -229,4 +229,8 @@ input::-webkit-input-placeholder{  /*改变搜索框内默认颜色*/
 }
 .book-adv img{
 	width: 100%;
+}
+
+.shiyan{
+	font-size: 50px;
 }
