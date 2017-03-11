@@ -2,6 +2,9 @@
 html{
 	font-size: 10px;
 }
+body{
+	font-size: 10px;
+}
 .header{
 	width: 100%;
 }
@@ -153,8 +156,8 @@ input::-webkit-input-placeholder{  /*改变搜索框内默认颜色*/
 }
 .bookImg{
     position: absolute;
-    width: 190px;
-    height: 266px;
+    width: 19rem;
+    height: 26.6rem;
     margin-right: 2%;
     box-shadow: 0 1px 3px rgba(0,0,0,.3);
 }
