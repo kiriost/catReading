@@ -158,9 +158,6 @@ input::-webkit-input-placeholder{  /*改变搜索框内默认颜色*/
     margin-right: 2%;
     box-shadow: 0 1px 3px rgba(0,0,0,.3);
 }
-.bookImg img{
-	width: 100%;
-}
 .book-cell{
 	overflow: hidden;
 	position: relative;
