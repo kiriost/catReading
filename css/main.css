@@ -2,6 +2,9 @@
 html{
 	font-size: 10px;
 }
+body{
+	font-size: 10px;
+}
 .header{
 	width: 100%;
 }
@@ -119,22 +122,30 @@ input::-webkit-input-placeholder{  /*改变搜索框内默认颜色*/
 }
 .module-header {
     height: 130px;
-    border-top: 3px solid #E53935;
-    border-bottom: 3px solid #EFEFEF;
+    border-top: 5px solid #E53935;
+    border-bottom: 5px solid #EFEFEF;
     position: relative;
 }
 .module-header-l{
 	position: absolute;
 }
-.module-header-l h3{
+.module-title{
     font-family: "微软雅黑";
     display: inline;
     color: #E53935;
     font-size: 45px;
     font-weight: 400;
     line-height: 130px;
-    background: url(../img/icon/hot.jpg) no-repeat 33px;
     padding-left: 104px;
+}
+.titleHot{
+	background: url(../img/icon/hot.jpg) no-repeat 33px;
+}
+.titleFree{
+	background: url(../img/icon/free.jpg) no-repeat 33px;
+}
+.titleTop{
+	background: url(../img/icon/top.jpg) no-repeat 33px;
 }
 .module-header-r{
 	position: absolute;
@@ -149,9 +160,11 @@ input::-webkit-input-placeholder{  /*改变搜索框内默认颜色*/
 .book-ul{
 	padding: 34px;
 	border-bottom: 4px solid #DDDDDD;
+	overflow: hidden;
+	display: block;
 }
 .bookImg{
-    display: inline-block;
+    position: absolute;
     width: 19rem;
     height: 26.6rem;
     margin-right: 2%;
@@ -162,8 +175,10 @@ input::-webkit-input-placeholder{  /*改变搜索框内默认颜色*/
 }
 .book-cell{
 	overflow: hidden;
-	display: inline-block;
+	position: relative;
+	left: 21rem;
 	width: 70%;
+	height: 26.6rem;
 }
 .book-title {
 	font-size: 48px;
@@ -177,7 +192,7 @@ input::-webkit-input-placeholder{  /*改变搜索框内默认颜色*/
     font-family: "微软雅黑";
     line-height: 5.1rem;
     overflow: hidden;
-    margin: 2.5rem 0 2.5rem 0;
+    margin: 2.5rem 0 3rem 0;
     color: #636563;
     display: -webkit-box;
     height: 10rem;
@@ -190,6 +205,7 @@ input::-webkit-input-placeholder{  /*改变搜索框内默认颜色*/
 }
 .book-meta-l{
 	float: left;
+	margin-top: 0.5rem;
 }
 .book-author{
 	background: url(../img/icon/writter.jpg) no-repeat left center;
@@ -198,23 +214,25 @@ input::-webkit-input-placeholder{  /*改变搜索框内默认颜色*/
 }
 .book-meta-r{
 	float: right;
+	margin-top: 0.5rem;
 }
 .book-tag{
 	font-size: 30px;
 	color: #E53935;
 	border: 1px solid #E53935;
-	padding: 5px 10px;
+	padding: 0 10px;
 	margin: 0 2.2rem 0 0;
 }
 .book-li{
-	margin-bottom: 2.5rem;
+	margin-bottom: 2.2rem;
 }
 .book-list{
-	font-size: 43px;
 	line-height: 102px;
 	text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    display: block;
+    font-size: 42px;
 }
 .book-list span{
 	color: #9C6500;
@@ -222,6 +240,7 @@ input::-webkit-input-placeholder{  /*改变搜索框内默认颜色*/
 }
 .book-list a{
 	color: #636563;
+
 }
 .heighlight a{ 
 	color: #2992CE;
@@ -229,15 +248,87 @@ input::-webkit-input-placeholder{  /*改变搜索框内默认颜色*/
 .book-adv{
 	display: block;
 	width: 100%;
+	margin-bottom: 4rem;
 }
 .book-adv img{
 	width: 100%;
 }
-
-.shiyan{
-	font-size: 50px;
-<<<<<<< HEAD
+/*排行榜*/
+.rank{
+	width: 100%;
+	height: 1474px;
+	background: #FFF;
+	overflow: hidden;
+	font-family: "微软雅黑";
+	border-bottom: 5px solid #DDD;
 }
-=======
+.rankHeader{
+	text-align: center;
+	border: solid 5px #E53935;
 }
->>>>>>> a9b11a9669c654bed3fc8e198d3de6d7c2e8674c
+.rankHeader span{
+	font-size: 48px;
+	width: 32.5%;
+	height: 122px;
+	line-height: 122px;
+	color: #636563;
+	border-right: solid 5px #E53935;
+	float: left;
+}
+.rankHeader span:nth-child(3){
+	border-right: none;
+}
+.rankHeader span.active{
+	background: #E53935;
+	color: #FFF;
+}
+.list li{
+	width: 100%;
+	height: 132px;
+	border-bottom: solid 5px #EFEFEF;
+	font-size: 46px;
+	line-height: 132px;
+	padding-left: 34px;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.list a{
+	color: #636563;
+}
+.count{
+	height: 62px;
+	width: 62px;
+	font-size: 34px;
+	color: #636563;
+	display: inline-block;
+	background: #F7F3F7;
+	border-radius: 31px;
+	line-height: 62px;
+	text-align: center;
+	margin-right: 34px;
+}
+.t span.count{
+	background: #E99A00;
+	color: #FFF;
+}
+/*底部*/
+.footer{
+	height: 567px;
+	background-color: #333;
+	font-size: 46px;
+	padding-left: 42px;
+	padding-top: 9px;
+	overflow: hidden;
+}
+.footerTit{
+	line-height: 92px;
+	color: #FFF;
+}
+.footerTxt{
+	line-height: 92px;
+	color: #636563;
+}
+.footer p:nth-child(6){
+	font-size: 36px;
+}

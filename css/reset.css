@@ -2,9 +2,9 @@
 
 @charset "utf-8";
 
-body,ul,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,input,em,span{margin:0;padding:0;}
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,input,em,span{margin:0;padding:0;}
 
-body{font-size:12px;}
+body{font-size:10px;}
 
 img{border:none;}
 
