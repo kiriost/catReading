@@ -273,12 +273,12 @@
 					<!-- module04结束 -->
 					<div class="rank">
 						<div class="rankHeader clearfix">
-							<span index="0" class="item active">新书榜</span>
-       						<span index="1" class="item">打赏榜</span>
-      						<span index="2" class="item">热销榜</span>
+							<span index="0" class="item active" id="rankClick">点击榜</span>
+       						<span index="1" class="item" id="rankPay">订阅榜</span>
+      						<span index="2" class="item" id="rankRun">追书榜</span>
 						</div>
 						<div class="rankList">
-							<ul class="list" style="display: block;">
+							<ul class="list" style="display: block ;" id="listClick">
 								<li class="t">
 									<span class="count">1</span>
 									<a href="#">夜来香</a>
@@ -301,15 +301,15 @@
 								</li>
 								<li>
 									<span class="count">6</span>
-									<a href="#">最强流氓小村医</a>
+									<a href="#">霓虹灯下</a>
 								</li>
 								<li>
 									<span class="count">7</span>
-									<a href="#">即使如此我还是喜欢你</a>
+									<a href="#">血色青春</a>
 								</li>
 								<li>
 									<span class="count">8</span>
-									<a href="#">血色青春</a>
+									<a href="#">最强流氓小村医</a>
 								</li>
 								<li>
 									<span class="count">9</span>
@@ -320,7 +320,7 @@
 									<a href="#">非你勿扰</a>
 								</li>
         					</ul>
-        					<ul class="list" style="display: none;">
+        					<ul class="list" style="display: none;" id="listPay">
 								<li class="t">
 									<span class="count">1</span>
 									<a href="#">女监狱里的男人</a>
@@ -362,18 +362,18 @@
 									<a href="#">非你勿扰</a>
 								</li>
         					</ul>
-        					<ul class="list" style="display: none;">
+        					<ul class="list" style="display: none;" id="listRun">
 								<li class="t">
 									<span class="count">1</span>
 									<a href="#">上门女婿</a>
 								</li>
 								<li class="t">
 									<span class="count">2</span>
-									<a href="#">和女主播同居的日子</a>
+									<a href="#">即使如此我还是喜欢你</a>
 								</li>
 								<li class="t">
 									<span class="count">3</span>
-									<a href="#">风水鬼咒</a>
+									<a href="#">人性底线</a>
 								</li>
 								<li>
 									<span class="count">4</span>
@@ -389,7 +389,7 @@
 								</li>
 								<li>
 									<span class="count">7</span>
-									<a href="#">即使如此我还是喜欢你</a>
+									<a href="#">非你勿扰</a>
 								</li>
 								<li>
 									<span class="count">8</span>
@@ -405,8 +405,8 @@
 								</li>
         					</ul>
 						</div>
-
 					</div>
+					<!-- rank结束 -->
 				</div>
 				<!-- content结束 -->	
 			</div>
@@ -419,6 +419,35 @@
 				<p class="footerTxt">京ICP证123456号 京ICP备123456号-1</p>
 				<p class="footerTxt">Copyright © 2017 maoyd.com All rights reserved.</p>
 			</div>
+			<!-- footer结束 -->
 		</div>
+		<!-- root结束 -->
+		<script src="js/zepto.min.js"></script>
+		<script>
+			var rankClick = $('#rankClick');
+			var rankPay = $('#rankPay');
+			var rankRun = $('#rankRun');
+			var listClick = $('#listClick');
+			var listPay = $('#listPay');
+			var listRun = $('#listRun');
+			rankClick.click(function(){
+				if(listClick.css('display') == "none"){
+					listClick.show().siblings().hide();
+					rankClick.addClass("active").siblings().removeClass("active");
+				}
+			})
+			rankPay.click(function(){
+				if(listPay.css('display') == "none"){
+					listPay.show().siblings().hide();
+					rankPay.addClass("active").siblings().removeClass("active");
+				}
+			})
+			rankRun.click(function(){
+				if(listRun.css('display') == "none"){
+					listRun.show().siblings().hide();
+					rankRun.addClass("active").siblings().removeClass("active");
+				}
+			})
+		</script>
 	</body>
 </html> 
