@@ -161,7 +161,10 @@ input::-webkit-input-placeholder{  /*改变搜索框内默认颜色*/
 	padding: 34px;
 	border-bottom: 4px solid #DDDDDD;
 	overflow: hidden;
+<<<<<<< HEAD
 	display: block;
+=======
+>>>>>>> e29e50d507d763b70c72afafd58dd8f5645a65c7
 }
 .bookImg{
     position: absolute;
@@ -253,6 +256,7 @@ input::-webkit-input-placeholder{  /*改变搜索框内默认颜色*/
 .book-adv img{
 	width: 100%;
 }
+<<<<<<< HEAD
 /*排行榜*/
 .rank{
 	width: 100%;
@@ -332,3 +336,9 @@ input::-webkit-input-placeholder{  /*改变搜索框内默认颜色*/
 .footer p:nth-child(6){
 	font-size: 36px;
 }
+=======
+
+.shiyan{
+	font-size: 50px;
+}
+>>>>>>> e29e50d507d763b70c72afafd58dd8f5645a65c7
