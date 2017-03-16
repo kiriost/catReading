@@ -319,8 +319,14 @@ input::-webkit-input-placeholder{  /*改变搜索框内默认颜色*/
     white-space: nowrap;
     overflow: hidden;
 }
+.list li:nth-child(10){
+	border-bottom: none;
+}
 .list a{
+	display: inline-block;
 	color: #636563;
+	width: 100%;
+	height: 100%;
 }
 .count{
 	height: 62px;
