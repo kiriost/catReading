@@ -305,7 +305,6 @@
 				console.log(0);
 			}else{
 				body.css('background-color', InitBackgroundColor);
-				console.log(1);
 			}
 			
 			//背景颜色切换
@@ -399,7 +398,7 @@
 				}
 				myRequest.open("GET", url, true);
 				myRequest.send();*/
-				var url = "https://api.openweathermap.org/date/2.5/weather?lat=35&lon=139";
+				var url = "ceshi.json";
 				$.get(url,function(data){
 					var myData = $.parseJSON(data);
 					alert(myData.name);
