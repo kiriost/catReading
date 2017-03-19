@@ -400,7 +400,7 @@
 				myRequest.send();*/
 				var url = "ceshi.json";
 				$.get(url,function(data){
-					var myData = $.parseJSON(data);
+					var myData = $.parseJSON('data');
 					alert(myData.name);
 				})
 			})
