@@ -44,7 +44,6 @@
 			background: url(../../../../static/src/img/icon/home.png) no-repeat;
 			vertical-align: middle;
 		}	
-
 		.navjiantou{
 			width: 50px;
 			height: 50px;
@@ -80,9 +79,6 @@
  			font-size: 0.9em;
  			color: #999;
  		}
- 		.contentBg:active{
- 			opacity: 0.5;
- 		}
  		.colordeflaut{
  			background-color: #F5F2ED;
  		}
@@ -101,9 +97,6 @@
  			display: inline-block;
  			vertical-align: middle;
  			margin: 0 6px;
- 		}
- 		.contentSwitch:active{
- 			opacity: 0.5;
  		}
  		.day{
  			background: url(../../../../static/src/img/icon/sun.png);
@@ -128,9 +121,6 @@
  			line-height: 62px;
  			margin-left: 10px;
  			font-size: 0.9em;
- 		}
- 		.fontAdj span:active{
- 			opacity: 0.5;
  		}
  		.contentTxt{
  			font-size: 44px;
@@ -255,16 +245,25 @@
 						<ul class="u-tap">
 							<li class="prev-button">上一章</li>
 							<li class="">目 录</li>
-							<li class="next-button">下一章</li>
+							<li class="next-button" id="nextButton">下一章</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 			<!-- content结束 -->
+			<p id="check">{{ test }}</p>
 		</div>
 		<!-- root结束 -->
 		<script src="../../../../static/src/js/lib/zepto.min.js"></script>
+		<script src="../../../../static/src/js/lib/vue.js"></script>
 		<script>
+			//数据绑定
+			var check = new Vue({
+				el: '#check',
+				date: {
+					test: 'hello world'
+				}
+			})
 			//缓存方法封装
 			var Util = (function(){
 				var prefix = 'html5_reader_';
@@ -288,65 +287,56 @@
 			var body = $('body');
 			var title = $('#title')
 			//标记夜间模式状态
-			NightMode = Util.storageGetter('bool-status');
-			if(!NightMode){
-				NightMode = false;
-			}
+			var NightMode = false;
 			var contentTxt = $('#contentTxt'); //段落字体
 			var bigger = $('#bigger');
 			var smaller = $('#smaller');
+			var nextButton = $('#nextButton');
 			//背景颜色设置
 			InitBackgroundColor = Util.storageGetter('background_color');
 			if (!InitBackgroundColor) {
 				 InitBackgroundColor = "#F5F2ED";
+				}
+			if(InitBackgroundColor == "rgb(0, 0, 0)"){
+				dayNight.removeClass("night").addClass('day');
+				body.css('background-color','#000');
+				title.css('color','#BE9A51');
+				NightMode = true;
+				console.log(0);
+			}else{
+				body.css('background-color', InitBackgroundColor);
+				console.log(1);
 			}
-			body.css('background-color', InitBackgroundColor);
+			
 			//背景颜色切换
-			deflautColor.click(function(){
-				body.css('background-color','#F5F2ED');
+			function bgChange(currentColor){
+				body.css('background-color',currentColor);
 				if(NightMode){
 					dayNight.removeClass("day").addClass("night");
 					title.css('color','#353535');
 					NightMode = false;
 				}
-				InitBackgroundColor = "#F5F2ED";
+				InitBackgroundColor = currentColor;
 				Util.storageSetter('background_color', InitBackgroundColor);
+			}
+			deflautColor.click(function(){
+				bgChange($(this).css('background-color'));
 			});
 			firstColor.click(function(){
-				body.css('background-color','#FAF5E6');
-				if(NightMode){
-					dayNight.removeClass("day").addClass("night");
-					title.css('color','#353535');
-					NightMode = false;
-				}
-				InitBackgroundColor = "#FAF5E6";
-				Util.storageSetter('background_color', InitBackgroundColor);
+				bgChange($(this).css('background-color'));
 			});
 			secondColor.click(function(){
-				body.css('background-color','#D6F1D7');
-				if(NightMode){
-					dayNight.removeClass("day").addClass("night");
-					title.css('color','#353535');
-					NightMode = false;
-				}
-				InitBackgroundColor = "#D6F1D7";
-				Util.storageSetter('background_color', InitBackgroundColor);
+				bgChange($(this).css('background-color')); 
 			});
 			thirdColor.click(function(){
-				body.css('background-color','#FFF');
-				if(NightMode){
-					dayNight.removeClass("day").addClass("night");
-					title.css('color','#353535');
-					NightMode = false;
-				}
-				InitBackgroundColor = "#FFF";
-				Util.storageSetter('background_color', InitBackgroundColor);
+				bgChange($(this).css('background-color')); 
 			});
 			//白天黑夜模式切换
-			dayNight.click(function(){
+			function changeDayNight(){
 				if(NightMode){
 					dayNight.removeClass("day").addClass("night");
 					body.css('background-color','#F5F2ED');
+					title.css('color','#353535');
 					NightMode = false;
 				}
 				else if(!NightMode){
@@ -355,7 +345,11 @@
 					title.css('color','#BE9A51');
 					NightMode = true;
 				}
-				Util.storageSetter('bool-status', NightMode);  //存取模式状态
+				InitBackgroundColor = body.css('background-color');
+				Util.storageSetter('background_color', InitBackgroundColor);
+			}
+			dayNight.click(function(){
+				changeDayNight();
 			});
 			//字体设置
 			InitFontSize = Util.storageGetter('font_size');
@@ -383,6 +377,34 @@
 				Util.storageSetter('font_size', InitFontSize);
 				contentTxt.css('font-size',InitFontSize);
 			});
+
+			//交换数据
+			/*var myRequest = new XMLHttpRequest();
+			var url = "http://api.openweathermap.org/date/2.5/weather?lat=35&lon=139";
+
+			myRequest.onreadystatechange = function(){
+				if(myRequest.readyStatus === 4 && myRequest.status === 200){
+					var myObject = JSON.parse(myRequest.responseText);
+				}
+			}*/
+			nextButton.click(function(){
+				/*var myRequest = new XMLHttpRequest();
+				var url = "ceshi.json";
+				console.log(3)
+;				myRequest.onreadystatechange = function(){
+					if(myRequest.readyStatus === 4 && myRequest.status === 200){
+						var myObject = JSON.parse(myRequest.responseText);
+						alert(myObject.dt);
+					}
+				}
+				myRequest.open("GET", url, true);
+				myRequest.send();*/
+				var url = "https://api.openweathermap.org/date/2.5/weather?lat=35&lon=139";
+				$.get(url,function(data){
+					var myData = $.parseJSON(data);
+					alert(myData.name);
+				})
+			})
 		</script>
 	</body>
 </html>
