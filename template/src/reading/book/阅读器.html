@@ -216,10 +216,10 @@
 			<!-- collection结束 -->
 			<div class="content">
 				<div class="navRoute">
-					<a href="#" class="navHome"></a><span class="navjiantou"></span><a href="#" class="navTxt">校园绝品大圣</a><span class="navjiantou"></span><a href="#" class="navTxt">章节目录</a>
+					<a href="#" class="navHome"></a><span class="navjiantou"></span><a href="#" class="navTxt" id="bookName">{{ bookName }}</a><span class="navjiantou"></span><a href="#" class="navTxt">章节目录</a>
 				</div>
 				<div class="middle">
-					<h4 id="title">第二章:   怎么证明是你的车?</h4>
+					<h4 id="title">{{ charpterTitle }}</h4>
 					<div class="adjust clearfix">
 						<div class="bgAdj">
 							<div class="contentBg colordeflaut" id="deflautColor">A</div>
@@ -235,12 +235,11 @@
 					</div>
 					<!-- adjust结束 -->
 					<div class="contentTxt" id="contentTxt">
-						<p>我叫李初一，今年二十岁整，跟爷爷房，还有我们那家寿衣店的门脸，二楼是往外租的房子，有四家租户。</p><p>因为我家做的是死人的生意，所以二楼的房子一直租不上好价钱，有好多来这里租房子的，一看我们一楼是一个花圈寿衣店就转头找别处去租了要去催房租，如果他再不交，我就让他卷铺盖走人。</p><p>当然其他租客虽然都比较拮据，可房租付得还是比较及时的。</p><p>这一天的上午，我听到那个网管下夜班回来，就从寿衣店的后门进到院子找他要房租，而且我已经做好了发飙，并露出一副凶狠包租公嘴脸的准备。</p><p>这个网管有些胖，戴着个眼镜，一米六五左右的个子，十九岁，正好比我小一岁，平时酷爱网游，因为没钱上网，这才去找了一份网管的工作，据说做网管，可以有免费的上网机会。</p><p>他的脸圆嘟嘟的，五官还算工整，可惜没有发财命，注定一辈子没啥钱，就算他偶尔得了一笔横财，那也会很快败光，否则他就会倒大霉，要问我为什么知道这些，我可不是猜的，我这看相的手艺是跟爷爷学的，我们虽然开的花圈寿衣店，可在开店之前爷爷却是一个算命的，据说还被人们称为神相，可惜后来因为算命，我爷爷得罪了一些人，从而间接导致我父母的离世，之后我爷爷便再也没有帮任何人算过命，这才开了花圈寿衣店做起了死人的生意。</p><p>爷爷虽然不看命了，可身上的本事不想失传，所以就私下教给了我，不过他告诉过我，他活着的时候，我不允许靠算命谋生，等他死了，他就管不着了，所以直到今天，我都没有正式给什么人算过什么命，或者看过相，也不知道自己算得准不住，看得灵不灵。</p><p>今天我在院子里截住那胖网管后，我就微微惊讶&ldquo;咦&rdquo;了一声。</p><p>那网管见到我，也是吓了一跳，多半是猜到我要找他催要房租了，不等我说话，他就说，让我再宽限他一日，明天早起一定给我。</p><p>我摆摆手说：&ldquo;看样子，你是要发一笔小财了？&rdquo;</p><p>我之所这么说，是因为我在这胖网管的天庭和鼻子上个看到了一个圆形的红疙瘩。</p><p>这胖网管十九岁，按照命理上来说，看流年运势应该看天庭，如果这一年他的天庭饱满，那么他这一年的运势就会很旺，平坦则是运势一般，如果凹陷、歪曲，那运势一定很烂。</p>
+						<p v-for="charpterContent in charpterContents">{{ charpterContent.bookContent }} </p>
 					</div>
-					<div class="author-say" id="author-say">
-						<p><a href="#" class="name">小叮铃</a> 说：</p>
-						<div class="authorContent">前面修改了一下，大家可以回去看一下，二十四和二十五章。</div>
-					</div>
+
+					<!--
+						 -->
 					<div class="goButton">
 						<ul class="u-tap">
 							<li class="prev-button">上一章</li>
@@ -251,19 +250,11 @@
 				</div>
 			</div>
 			<!-- content结束 -->
-			<p id="check">{{ test }}</p>
 		</div>
 		<!-- root结束 -->
 		<script src="../../../../static/src/js/lib/zepto.min.js"></script>
 		<script src="../../../../static/src/js/lib/vue.js"></script>
 		<script>
-			//数据绑定
-			var check = new Vue({
-				el: '#check',
-				date: {
-					test: 'hello world'
-				}
-			})
 			//缓存方法封装
 			var Util = (function(){
 				var prefix = 'html5_reader_';
@@ -378,30 +369,30 @@
 			});
 
 			//交换数据
-			/*var myRequest = new XMLHttpRequest();
-			var url = "http://api.openweathermap.org/date/2.5/weather?lat=35&lon=139";
-
-			myRequest.onreadystatechange = function(){
-				if(myRequest.readyStatus === 4 && myRequest.status === 200){
-					var myObject = JSON.parse(myRequest.responseText);
-				}
-			}*/
 			nextButton.click(function(){
-				/*var myRequest = new XMLHttpRequest();
 				var url = "ceshi.json";
-				console.log(3)
-;				myRequest.onreadystatechange = function(){
-					if(myRequest.readyStatus === 4 && myRequest.status === 200){
-						var myObject = JSON.parse(myRequest.responseText);
-						alert(myObject.dt);
-					}
-				}
-				myRequest.open("GET", url, true);
-				myRequest.send();*/
-				var url = "ceshi.json";
-				$.get(url,function(data){
-					var myData = $.parseJSON(data);
-					alert(myData.name);
+				console.log(0);
+				$.get(url, {"chatpId": 1, "bookId": 1}, function(data){
+					console.log(1);
+					//数据绑定
+					var title = new Vue({	//章节名
+					  el: '#title',
+					  data: {
+					    charpterTitle: data.charpterName
+					  }
+					})
+					var bookName = new Vue({	//书名
+					  el: '#bookName',
+					  data: {
+					    bookName: data.bookName
+					  }
+					})
+					var bookName = new Vue({	//章节内容
+					  el: '#contentTxt',
+					  data: {
+					    charpterContents: data.items
+					  }
+					})
 				})
 			})
 		</script>
