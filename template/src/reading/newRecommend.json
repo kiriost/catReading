@@ -1,0 +1,58 @@
+{
+	"newRecommend": {
+		"imgList": [
+		{
+			"Id": 3333330,
+			"coverImag": "bookNew01.jpg",
+			"bookName": "我的极品上司"
+		},
+		{
+			"Id": 3333330,
+			"coverImag": "bookNew02.jpg",
+			"bookName": "花花世界"
+		},
+		{
+			"Id": 3333330,
+			"coverImag": "bookNew03.jpg",
+			"bookName": "霓虹灯下"
+		},
+		{
+			"Id": 3333330,
+			"coverImag": "bookNew04.jpg",
+			"bookName": "童子命"
+		}
+		],
+		"bookList": [
+		{
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}, 
+		{
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}, 
+		{
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：倒插门"
+		}, 
+		{
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}, 
+		{
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "了女人：我是倒插门"
+		}
+		]
+	}
+}

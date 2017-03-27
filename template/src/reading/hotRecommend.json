@@ -1,0 +1,38 @@
+{
+	"hotRecommend": {
+		"Id": 3333330,
+		"coverImag": "content01.jpg",
+		"bookName": "我的后宫军团",
+		"bookIntroduction": "召唤无数美女伺候我，屌丝也有逆袭的时候!",
+		"author": "小紫夜",
+		"authorId": "....",
+		"type": 2,
+		"typeName": "玄幻",
+		"bookList": [{
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}, {
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}, {
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}, {
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}, {
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}]
+	}
+}

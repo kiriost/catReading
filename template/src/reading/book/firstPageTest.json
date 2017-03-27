@@ -1,0 +1,305 @@
+{
+	"showImg": [{
+		"Id": 88888,
+		"bookSrc": "show01.jpg",
+		"bookName": "与女主播末日求生的日子"
+	}, {
+		"Id": 555555,
+		"bookSrc": "show02.jpg",
+		"bookName": "非礼勿扰"
+	}, {
+		"Id": 22222222,
+		"bookSrc": "show03.jpg",
+		"bookName": "狠人狠事"
+	}],
+	"hotRecommend": {
+		"Id": 3333330,
+		"bookSrc": "content01.jpg",
+		"bookName": "我的后宫军团",
+		"bookIntroduction": "召唤无数美女伺候我，屌丝也有逆袭的时候!",
+		"author": "小紫夜",
+		"authorId": "....",
+		"type": 2,
+		"typeName": "玄幻",
+		"bookList": [{
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}, {
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}, {
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}, {
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}, {
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}]
+	},
+	"freeCompetitive": {
+		"Id": 3333330,
+		"bookSrc": "content02.jpg",
+		"bookName": "最强食神系统",
+		"bookIntroduction": "最强食神系统从天而降，李牧歌从此走上一条与众不同的巅峰路!",
+		"author": "满口",
+		"authorId": "....",
+		"type": 12,
+		"typeName": "都市",
+		"bookList": [{
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}, {
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}, {
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}, {
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}, {
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}]
+	},
+	"groundCompetitive": {
+		"Id": 3333330,
+		"bookSrc": "content03.jpg",
+		"bookName": "我的极品妖仙女友",
+		"bookIntroduction": "我一生最敬佩四个男人，许仙、董永、宁采臣和洛十一……!",
+		"author": "剑神易笑",
+		"authorId": "....",
+		"type": 11,
+		"typeName": "社会",
+		"bookList": [{
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}, {
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}, {
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}, {
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}, {
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}]
+	},
+	"newRecommend": {
+		"imgList": [
+		{
+			"Id": 3333330,
+			"bookSrc": "bookNew01.jpg",
+			"bookName": "我的极品上司"
+		},
+		{
+			"Id": 3333330,
+			"bookSrc": "bookNew02.jpg",
+			"bookName": "花花世界"
+		},
+		{
+			"Id": 3333330,
+			"bookSrc": "bookNew03.jpg",
+			"bookName": "霓虹灯下"
+		},
+		{
+			"Id": 3333330,
+			"bookSrc": "bookNew04.jpg",
+			"bookName": "童子命"
+		}
+		],
+		"bookList": [
+		{
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}, 
+		{
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}, 
+		{
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：倒插门"
+		}, 
+		{
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}, 
+		{
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "了女人：我是倒插门"
+		}
+		]
+	},
+	"listClick": [
+	{
+		"Id": 111111,
+		"bookName": "卖给了女人：我是倒插门"
+	},
+	{
+		"Id": 111111,
+		"bookName": "卖给了我是倒插门"
+	},
+	{
+		"Id": 111111,
+		"bookName": "卖给了女人：我插门"
+	},
+	{
+		"Id": 111111,
+		"bookName": "给了女人：我是倒插门"
+	},
+	{
+		"Id": 111111,
+		"bookName": "卖给了女人：我是倒插门"
+	},
+	{
+		"Id": 111111,
+		"bookName": "卖给了女插门"
+	},
+	{
+		"Id": 111111,
+		"bookName": "卖人：我是倒插门"
+	},
+	{
+		"Id": 111111,
+		"bookName": "给了女人：我是倒插门"
+	},
+	{
+		"Id": 111111,
+		"bookName": "卖给了女人：我是倒插门"
+	},
+	{
+		"Id": 111111,
+		"bookName": "卖给了女人：我是倒插门"
+	}
+	],
+	"listPay": [
+	{
+		"Id": 111111,
+		"bookName": "卖给了女人：我插门"
+	},
+	{
+		"Id": 111111,
+		"bookName": "卖给了女人：我是门"
+	},
+	{
+		"Id": 111111,
+		"bookName": "卖给了女人：我是倒插门"
+	},
+	{
+		"Id": 111111,
+		"bookName": "卖给了女人：我插门"
+	},
+	{
+		"Id": 111111,
+		"bookName": "卖给：我是倒插门"
+	},
+	{
+		"Id": 111111,
+		"bookName": "卖给了女人：我"
+	},
+	{
+		"Id": 111111,
+		"bookName": "卖给了女人：插门"
+	},
+	{
+		"Id": 111111,
+		"bookName": "卖给了女人：我是倒插门"
+	},
+	{
+		"Id": 111111,
+		"bookName": "卖给了女人：我是倒插门"
+	},
+	{
+		"Id": 111111,
+		"bookName": "卖给了是倒插门"
+	}
+	],
+	"listrun": [
+	{
+		"Id": 111111,
+		"bookName": "卖给了女人：我是倒插门"
+	},
+	{
+		"Id": 111111,
+		"bookName": "卖给了女人：我是倒插门"
+	},
+	{
+		"Id": 111111,
+		"bookName": "卖给了女人倒插门"
+	},
+	{
+		"Id": 111111,
+		"bookName": "卖给了女人：我是倒插门"
+	},
+	{
+		"Id": 111111,
+		"bookName": "卖给了女人：我门"
+	},
+	{
+		"Id": 111111,
+		"bookName": "卖给了女人：我是倒插门"
+	},
+	{
+		"Id": 111111,
+		"bookName": "卖给了女人：插门"
+	},
+	{
+		"Id": 111111,
+		"bookName": "卖：我是倒插门"
+	},
+	{
+		"Id": 111111,
+		"bookName": "卖给了女人：我是倒插门"
+	},
+	{
+		"Id": 111111,
+		"bookName": "卖给：我是倒插门"
+	}
+	]
+}

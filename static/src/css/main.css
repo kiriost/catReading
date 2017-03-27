@@ -340,7 +340,7 @@ input::-webkit-input-placeholder{  /*改变搜索框内默认颜色*/
 	text-align: center;
 	margin-right: 34px;
 }
-.t span.count{
+.list .t{
 	background: #E99A00;
 	color: #FFF;
 }

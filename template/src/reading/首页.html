@@ -41,57 +41,61 @@
 						<a href="#">上门女婿</a> 
 						<a href="#">活色生香</a>
 						<a href="#">鬼迷心窍</a>
-						<a href="#">匹夫</a>
+						<a href="#">匹夫</a> 
 					</div>
-					<div class="showImg clearfix">
-						<a href="#">
-							<img src="../../../static/src/img/show01.jpg" alt="与女主播末日求生的日子">
-							与女主播末日求生的日子
+					<div class="showImg clearfix" id="showImg">
+						<a v-for="content in contents" v-bind:href="content.Id"> 		<!-- 链接 -->
+							<img v-bind:src="'../../../static/src/img/' + content.coverImag" v-bind:alt="content.bookName">
+							[[ content.bookName ]]
+						</a> 
+						<!-- <a v-blind:href="contents[0].showHref">
+							<img v-blind:src="contents[0].showSrc" v-bind:alt="contents[0].showTitle">
+							[[ contents[0].showTitle ]]
 						</a>
-						<a href="#">
-							<img src="../../../static/src/img/show02.jpg" alt="非礼勿扰">
-							非礼勿扰
+						<a v-blind:href="contents[1].showHref">
+							<img v-blind:src="contents[1].showSrc" v-blind:alt="contents[1].showTitle">
+							[[ contents[1].showTitle ]]
 						</a>
-						<a href="#">
-							<img src="../../../static/src/img/show03.jpg" alt="狠人狠事">
-							狠人狠事
-						</a>
+						<a v-blind:href="contents[2].showHref">
+							<img v-blind:src="contents[2].showSrc" v-blind:alt="contents[2].showTitle">
+							[[ contents[2].showTitle ]]
+						</a> -->
 					</div>
-					<div class="module">
+					<div class="module"  id="hotModule">
 						<div class="module-header">
 							<div class="module-header-l">
 								<h3 class="module-title titleHot">热门推荐</h3>
 							</div>
 							<div class="module-header-r">
-								<a href="#"></a>
+								<a href="#"></a>		<!-- 链接到书库的热门推荐，怎么链接? -->
 							</div>
 						</div>
 
 						<ul class="book-ul">
 							<li class="book-li">
-								<a href="#">
+								<a v-bind:href="hots.Id">		<!-- 链接 -->
 									<div class="bookImg">
-										<img src="../../../static/src/img/content01.jpg" alt="我的后宫军团">
+										<img v-bind:src="'../../../static/src/img/'+hots.coverImag" v-bind:alt="hots.bookName">
 									</div>
 									<div class="book-cell">
-										<h4 class="book-title">我的后宫军团</h4>
-										<p class="book-desc">召唤无数美女伺候我，屌丝也有逆袭的时候!</p>
+										<h4 class="book-title"> [[ hots.bookName ]] </h4>
+										<p class="book-desc"> [[ hots.bookIntroduction ]] </p>
 										<div class="book-meta clearfix">
 											<div class="book-meta-l">
-												<span class="book-author">小紫夜</span>
+												<span class="book-author"> [[ hots.author ]] </span>
 											</div>
 											<div class="book-meta-r">
-													<em class="book-tag">玄幻</em>
+													<em class="book-tag"> [[ hots.typeName ]] </em>
 											</div>
 										</div>
 									</div>
 								</a>
 							</li>
-							<li class="book-list">
-								<a href="#"><span>[社会]</span></a>
-								<a href="#">卖给了女人：我是倒插门</a>
+							<li class="book-list"  v-for="hot in hots.bookList">
+								<a v-bind:href="hot.type"><span v-text=" '[' + hot.typeName + ']' "></span></a>
+								<a v-bind:href="hot.Id"> [[ hot.bookName ]] </a>
 							</li>
-							<li class="book-list heighlight">
+							<!-- <li class="book-list heighlight">
 								<a href="#"><span>[悬疑]</span></a>
 								<a href="#">最牛的男人：我的极品妖仙女友</a>
 							</li>
@@ -106,7 +110,7 @@
 							<li class="book-list">
 								<a href="#"><span>[社会]</span></a>
 								<a href="#">女友扣绿帽：纯情小神医</a>
-							</li>
+							</li> -->
 						</ul>
 					</div>
 					<!-- module01结束 -->
@@ -114,7 +118,7 @@
 						<img src="../../../static/src/img/advertise01.jpg">
 					</a>
 
-					<div class="module">
+					<div class="module" id="freeModule">
 						<div class="module-header">
 							<div class="module-header-l">
 								<h3 class="module-title titleFree">免费精品</h3>
@@ -126,29 +130,29 @@
 
 						<ul class="book-ul">
 							<li class="book-li">
-								<a href="#">
+								<a v-bind:href="frees.Id">		<!-- 链接 -->
 									<div class="bookImg">
-										<img src="../../../static/src/img/content02.jpg" alt="最强食神系统">
+										<img v-bind:src="'../../../static/src/img/'+frees.coverImag" v-bind:alt="frees.bookName">
 									</div>
 									<div class="book-cell">
-										<h4 class="book-title">最强食神系统</h4>
-										<p class="book-desc">最强食神系统从天而降，李牧歌从此走上一条与众不同的巅峰路。!</p>
+										<h4 class="book-title"> [[ frees.bookName ]] </h4>
+										<p class="book-desc"> [[ frees.bookIntroduction ]] </p>
 										<div class="book-meta clearfix">
 											<div class="book-meta-l">
-												<span class="book-author">满口</span>
+												<span class="book-author"> [[ frees.author ]] </span>
 											</div>
 											<div class="book-meta-r">
-													<em class="book-tag">都市</em>
+													<em class="book-tag"> [[ frees.typeName ]] </em>
 											</div>
 										</div>
 									</div>
 								</a>
 							</li>
-							<li class="book-list">
-								<a href="#"><span>[社会]</span></a>
-								<a href="#">卖给了女人：我是倒插门</a>
+							<li class="book-list"  v-for="free in frees.bookList">
+								<a v-bind:href="free.type"><span v-text=" '[' + free.typeName + ']' "></span></a>
+								<a v-bind:href="free.Id"> [[ free.bookName ]] </a>
 							</li>
-							<li class="book-list heighlight">
+							<!-- <li class="book-list heighlight">
 								<a href="#"><span>[悬疑]</span></a>
 								<a href="#">最牛的男人：我的极品妖仙女友</a>
 							</li>
@@ -163,12 +167,12 @@
 							<li class="book-list">
 								<a href="#"><span>[社会]</span></a>
 								<a href="#">女友扣绿帽：纯情小神医</a>
-							</li>
+							</li> -->
 						</ul>
 					</div>
 					<!-- module02结束 -->
 
-					<div class="module">
+					<div class="module" id="groundModule">
 						<div class="module-header">
 							<div class="module-header-l">
 								<h3 class="module-title titleTop">上架精品</h3>
@@ -179,29 +183,29 @@
 						</div>
 						<ul class="book-ul">
 							<li class="book-li">
-								<a href="#">
+								<a v-bind:href="grounds.Id">		<!-- 链接 -->
 									<div class="bookImg">
-										<img src="../../../static/src/img/content03.jpg" alt="我的极品妖仙女友">
+										<img v-bind:src="'../../../static/src/img/'+grounds.coverImag" v-bind:alt="grounds.bookName">
 									</div>
 									<div class="book-cell">
-										<h4 class="book-title">我的极品妖仙女友</h4>
-										<p class="book-desc">我一生最敬佩四个男人，许仙、董永、宁采臣和洛十一……!</p>
+										<h4 class="book-title"> [[ grounds.bookName ]] </h4>
+										<p class="book-desc"> [[ grounds.bookIntroduction ]] </p>
 										<div class="book-meta clearfix">
 											<div class="book-meta-l">
-												<span class="book-author">剑神易笑</span>
+												<span class="book-author"> [[ grounds.author ]] </span>
 											</div>
 											<div class="book-meta-r">
-													<em class="book-tag">社会</em>
+													<em class="book-tag"> [[ grounds.typeName ]] </em>
 											</div>
 										</div>
 									</div>
 								</a>
 							</li>
-							<li class="book-list">
-								<a href="#"><span>[社会]</span></a>
-								<a href="#">卖给了女人：我是倒插门</a>
+							<li class="book-list"  v-for="ground in grounds.bookList">
+								<a v-bind:href="ground.type"><span v-text=" '[' + ground.typeName + ']' "></span></a>
+								<a v-bind:href="ground.Id"> [[ ground.bookName ]] </a>
 							</li>
-							<li class="book-list heighlight">
+>							<!-- <li class="book-list heighlight">
 								<a href="#"><span>[悬疑]</span></a>
 								<a href="#">最牛的男人：我的极品妖仙女友</a>
 							</li>
@@ -216,7 +220,7 @@
 							<li class="book-list">
 								<a href="#"><span>[社会]</span></a>
 								<a href="#">女友扣绿帽：纯情小神医</a>
-							</li>
+							</li> -->
 						</ul>
 					</div>
 					<!-- module03结束 -->
@@ -224,7 +228,7 @@
 						<img src="../../../static/src/img/advertise02.jpg">
 					</a>
 
-					<div class="module">
+					<div class="module" id="newModule">
 						<div class="module-header">
 							<div class="module-header-l">
 								<h3 class="module-title titleNew">新书推荐</h3>
@@ -235,11 +239,11 @@
 						</div>
 						<ul class="book-ul">
 							<li class="bookNew clearfix">
-								<a href="#">
-									<img src="../../../static/src/img/bookNew01.jpg">
-									<p>我的极品上司</p>
+								<a v-bind:href="news.Id" v-for="news in news.imgList">
+									<img v-bind:src="'../../../static/src/img/'+news.coverImag">
+									<p> [[ news.bookName ]] </p>
 								</a>
-								<a href="#">
+								<!-- <a href="#">
 									<img src="../../../static/src/img/bookNew02.jpg">
 									<p>花花世界</p>
 								</a>
@@ -250,13 +254,13 @@
 								<a href="#">
 									<img src="../../../static/src/img/bookNew04.jpg">
 									<p>童子命</p>
-								</a>
+								</a> -->
 							</li>
-							<li class="book-list heighlight">
-								<a href="#"><span>[悬疑]</span></a>
-								<a href="#">最牛的男人：我的极品妖仙女友</a>
+							<li class="book-list" v-for="news in news.bookList">
+								<a v-bind:href="news.type"><span v-text=" '[' + news.typeName + ']' "></span></a>
+								<a v-bind:href="news.Id"> [[ news.bookName ]] </a>
 							</li>
-							<li class="book-list">
+							<!-- <li class="book-list">
 								<a href="#"><span>[社会]</span></a>
 								<a href="#">美艳小少妇：误入女儿国</a>
 							</li>
@@ -267,23 +271,23 @@
 							<li class="book-list">
 								<a href="#"><span>[社会]</span></a>
 								<a href="#">女友扣绿帽：纯情小神医</a>
-							</li>
+							</li> -->
 						</ul>
-					</div>
+					</div>	
 					<!-- module04结束 -->
-					<div class="rank">
+					<div class="rank" id="rank">
 						<div class="rankHeader clearfix">
-							<span index="0" class="item active" id="rankClick">点击榜</span>
-       						<span index="1" class="item" id="rankPay">订阅榜</span>
-      						<span index="2" class="item" id="rankRun">追书榜</span>
+							<span index="0" class="item active" id="rankClick" v-on:click="rankClick">点击榜</span>
+       						<span index="1" class="item" id="rankPay" v-on:click="rankPay">订阅榜</span>
+      						<span index="2" class="item" id="rankRun" v-on:click="rankRun">追书榜</span>
 						</div>
 						<div class="rankList">
 							<ul class="list" style="display: block ;" id="listClick">
-								<li class="t">
-									<span class="count">1</span>
-									<a href="#">夜来香</a>
+								<li v-for="(clicks, index) in clicks">
+									<span v-bind:class="{'t count': index<3, 'count': index>2 }"> [[ index + 1 ]] </span>
+									<a v-bind:href="clicks.Id"> [[ clicks.bookName ]] </a>
 								</li>
-								<li class="t">
+								<!-- <li class="t">
 									<span class="count">2</span>
 									<a href="#">和女主播同居的日子</a>
 								</li>
@@ -318,14 +322,14 @@
 								<li>
 									<span class="count">10</span>
 									<a href="#">非你勿扰</a>
-								</li>
+								</li> -->
         					</ul>
         					<ul class="list" style="display: none;" id="listPay">
-								<li class="t">
-									<span class="count">1</span>
-									<a href="#">女监狱里的男人</a>
+								<li v-for="(pay, index) in pays">
+									<span v-bind:class="{'t count': index<3, 'count': index>2 }"> [[ index + 1 ]] </span>
+									<a v-bind:href="pay.Id"> [[ pay.bookName ]] </a>
 								</li>
-								<li class="t">
+								<!-- <li class="t">
 									<span class="count">2</span>
 									<a href="#">童养婿</a>
 								</li>
@@ -360,14 +364,14 @@
 								<li>
 									<span class="count">10</span>
 									<a href="#">非你勿扰</a>
-								</li>
+								</li> -->
         					</ul>
         					<ul class="list" style="display: none;" id="listRun">
-								<li class="t">
-									<span class="count">1</span>
-									<a href="#">上门女婿</a>
+								<li v-for="(run, index) in runs">
+									<span v-bind:class="{'t count': index<3, 'count': index>2 }"> [[ index + 1 ]] </span>
+									<a v-bind:href="run.Id"> [[ run.bookName ]] </a>
 								</li>
-								<li class="t">
+								<!-- <li class="t">
 									<span class="count">2</span>
 									<a href="#">即使如此我还是喜欢你</a>
 								</li>
@@ -402,7 +406,7 @@
 								<li>
 									<span class="count">10</span>
 									<a href="#">非你勿扰</a>
-								</li>
+								</li> -->
         					</ul>
 						</div>
 					</div>
@@ -423,9 +427,10 @@
 			<!-- footer结束 -->
 		</div>
 		<!-- root结束 -->
-		<script src="../../../static/src/js/lib/jquery.js"></script>
+		<script src="../../../static/src/js/lib/zepto.min.js"></script>
+		<script src="../../../static/src/js/lib/vue.js"></script>
 		<script>
-			var rankClick = $('#rankClick');
+			/*var rankClick = $('#rankClick');
 			var rankPay = $('#rankPay');
 			var rankRun = $('#rankRun');
 			var listClick = $('#listClick');
@@ -448,6 +453,107 @@
 					listRun.show().siblings().hide();
 					rankRun.addClass("active").siblings().removeClass("active");
 				}
+			})*/
+			var urlShowImg = "showImg.json";
+			var urlhotRecommend = "hotRecommend.json";
+			var urlfreeCompetitive = "freeCompetitive.json";
+			var urlgroundCompetitive = "groundCompetitive.json";
+			var urlNewRecommend = "newRecommend.json";
+			var urlRank = "paihangbang.json";
+			$.get(urlShowImg, {"firstPage": "true"}, function(data){
+					console.log(data);
+					console.log(1);
+					//数据绑定
+					var showImg = new Vue({			//展示图片区
+						delimiters: ['[[', ']]'],
+						el: "#showImg",
+						data: {
+							contents: data.showImg
+						}
+					})
+			})
+
+			$.get(urlhotRecommend, {"firstPage": "true"}, function(data){
+					//数据绑定
+					var hotRecommend = new Vue({			//热门推荐区
+						delimiters: ['[[', ']]'],
+						el: "#hotModule",
+						data: {
+							hots: data.hotRecommend
+						}
+					})
+			})
+
+			$.get(urlfreeCompetitive, {"firstPage": "true"}, function(data){
+					//数据绑定
+					var freeCompetitive = new Vue({			//免费精品区
+						delimiters: ['[[', ']]'],
+						el: "#freeModule",
+						data: {
+							frees: data.freeCompetitive
+						}
+					})
+			})
+
+			$.get(urlgroundCompetitive, {"firstPage": "true"}, function(data){
+					//数据绑定
+					var groundCompetitive = new Vue({			//上架精品区
+						delimiters: ['[[', ']]'],
+						el: "#groundModule",
+						data: {
+							grounds: data.groundCompetitive
+						}
+					})
+			})
+
+			$.get(urlNewRecommend, {"firstPage": "true"}, function(data){
+					//数据绑定
+					var newRecommend = new Vue({			//新书推荐区
+						delimiters: ['[[', ']]'],
+						el: "#newModule",
+						data: {
+							news: data.newRecommend
+						}
+					})
+			})
+
+			$.get(urlRank, {"firstPage": "true"}, function(data){
+					//数据绑定
+					var rank = new Vue({			//榜单区
+						delimiters: ['[[', ']]'],
+						el: "#rank",
+						data: {
+							clicks: data.listClick,
+							pays: data.listPay,
+							runs: data.listrun
+						},
+						methods: {
+							rankClick: function(){
+								var rankClick = $('#rankClick');
+								var listClick = $('#listClick');
+								if(listClick.css('display') == "none"){
+									listClick.show().siblings().hide();
+									rankClick.addClass("active").siblings().removeClass("active");
+								}
+							},
+							rankPay: function(){
+								var rankPay = $('#rankPay');
+								var listPay = $('#listPay');	
+								if(listPay.css('display') == "none"){
+									listPay.show().siblings().hide();
+									rankPay.addClass("active").siblings().removeClass("active");
+								}
+							},
+							rankRun: function(){
+								var rankRun = $('#rankRun');
+								var listRun = $('#listRun');	
+								if(listRun.css('display') == "none"){
+									listRun.show().siblings().hide();
+									rankRun.addClass("active").siblings().removeClass("active");
+								}
+							}
+						}
+					})
 			})
 		</script>
 	</body>

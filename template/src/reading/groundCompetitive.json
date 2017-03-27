@@ -1,0 +1,38 @@
+{
+	"groundCompetitive": {
+		"Id": 3333330,
+		"coverImag": "content03.jpg",
+		"bookName": "我的极品妖仙女友",
+		"bookIntroduction": "我一生最敬佩四个男人，许仙、董永、宁采臣和洛十一……!",
+		"author": "剑神易笑",
+		"authorId": "....",
+		"type": 11,
+		"typeName": "社会",
+		"bookList": [{
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}, {
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}, {
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}, {
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}, {
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}]
+	}
+}

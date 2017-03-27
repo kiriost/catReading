@@ -1,0 +1,38 @@
+{
+	"freeCompetitive": {
+		"Id": 3333330,
+		"coverImag": "content02.jpg",
+		"bookName": "最强食神系统",
+		"bookIntroduction": "最强食神系统从天而降，李牧歌从此走上一条与众不同的巅峰路!",
+		"author": "满口",
+		"authorId": "....",
+		"type": 12,
+		"typeName": "都市",
+		"bookList": [{
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}, {
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}, {
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}, {
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}, {
+			"Id": 111111,
+			"type": 11,
+			"typeName": "社会",
+			"bookName": "卖给了女人：我是倒插门"
+		}]
+	}
+}
