@@ -1,0 +1,23 @@
+{
+	"userRunBook": [
+		{
+			"imgSrc": "details01.jpg",
+			"recentlyCharpterNumber": 1,
+			"recentlyCharpter": "霸道总裁爱上我",
+			"lastReadCharpterNumber": "2",
+			"lastReadCharpter": "霸道总裁又爱上我",
+			"bookId": 2
+		},
+		{
+			"imgSrc": "details01.jpg",
+			"recentlyCharpterNumber": 1,
+			"recentlyCharpter": "霸道总裁爱上我",
+			"lastReadCharpterNumber": "2",
+			"lastReadCharpter": "霸道总裁又爱上我",
+			"bookId": 2
+		}
+	],
+	"balance": 3,
+	"votes": 5,
+	"recommended": 8
+}

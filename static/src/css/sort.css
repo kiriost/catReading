@@ -131,13 +131,12 @@ body{
 	text-align: center;
 	margin-right: 34px;
 }
-.t span.count{
+.list .t{
 	background: #E99A00;
 	color: #FFF;
 }
 /*底部*/
 .footer{
-	height: 567px;
 	background-color: #333;
 	font-size: 46px;
 	padding-left: 42px;

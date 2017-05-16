@@ -367,14 +367,47 @@
 				contentTxt.css('font-size',InitFontSize);
 			});
 
-			//交换数据
-			nextButton.click(function(){
-				var url = "ceshi.json";
-				console.log(0);
-				$.get(url, {"chatpId": 1, "bookId": 0}, function(data){
+			//数据
+			var id = 0;
+			var url = "ceshi.json";
+			$.get(url, {"chatpId": 1, "bookId": 0}, function(data){  //页面加载时绑定
+				var arrays = new Array();
+				arrays = data.neirong.split("#");
+				id = data.charpeterId;
+				//数据处理
+				$('#title').html(data.charptersName);
+				$('#bookName').html(data.bookName);
+				for(var i in data.items)
+					$('#contentTxt').append('<p>' + data.items[i].chaptersContent + '</p>');
+				
+			})
+			nextButton.click(function(){     //点下一章时绑定
+				if (id == chapters.length - 1) {
+					return
+				}
+				id++;
+				$.get(url, {id,}, function(data){
 					var arrays = new Array();
 					arrays = data.neirong.split("#");
 					console.log(arrays);
+					//数据处理
+					$('#title').html(data.charptersName);
+					$('#bookName').html(data.bookName);
+					for(var i in data.items)
+						$('#contentTxt').append('<p>' + data.items[i].chaptersContent + '</p>');
+					
+				})
+			})
+
+			nextButton.click(function(){     //点上一章时绑定
+				if (id == 0) {
+					return
+				}
+				id--;
+				$.get(url, {"chatpId": 1, "bookId": 0}, function(data){
+					var arrays = new Array();
+					arrays = data.neirong.split("#");
+					console 	.log(arrays);
 					//数据处理
 					$('#title').html(data.charptersName);
 					$('#bookName').html(data.bookName);

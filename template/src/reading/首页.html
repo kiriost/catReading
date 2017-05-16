@@ -380,7 +380,7 @@
 									<a href="#">人性底线</a>
 								</li>
 								<li>
-									<span class="count">4</span>
+								 	<span class="count">4</span>
 									<a href="#">乡野村医</a>
 								</li>
 								<li>
@@ -555,6 +555,27 @@
 						}
 					})
 			})
+
+var a = document.location.href.split('/');
+b = a.length - 2;
+console.log(a[b]);
+
+function getBookId(){
+    var url=window.location.href;
+    var s=url.split('/');
+    var bookId;
+    for (x in s){
+        var bookIdTest = new RegExp("^[0-9]+$").test(s[x]);
+        if (bookIdTest==true){
+            bookId=parseInt(s[x]);
+            return bookId;
+        }else{
+        	return false;
+        }
+    }
+}
+ID = getBookId();
+console.log(ID);
 		</script>
 	</body>
 </html> 

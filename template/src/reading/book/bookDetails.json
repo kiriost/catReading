@@ -1,0 +1,65 @@
+{
+    "bookInfo": [{
+        "id": "1",
+        "coverImg": "details01.jpg",
+        "bookName": "雨季不再来",
+        "wordNumber": 3000,
+        "author": "三毛",
+        "clicksNumber": 36,
+        "subscribersNumber": 42,
+        "state": "连载中",
+        "chaptersName": "撒哈拉的沙漠",
+        "chaptersId": 1,
+        "updateTime": "02-16 00:22",
+        "chaptersType": 1,
+        "reward": 62,
+        "catBallNumber": 32,
+        "catnipNumber": 25,
+        "catStickNumber": 62,
+        "catFoodNumber": 35,
+        "catFishNumber": 25,
+        "catHouseNumber": 46
+    }],
+    "bookReward": [{
+            "userName": "蒙蒙",
+            "productionNumber": 5,
+            "rewardType": "猫粮"
+        },
+
+        {
+            "userName": "新新",
+            "productionNumber": 3,
+            "rewardType": "猫窝"
+        },
+        {
+            "userName": "毛毛",
+            "productionNumber": 2,
+            "rewardType": "逗猫棒"
+        }
+    ],
+    "bookComment": [{
+            "userName": "蒙蒙",
+            "commentTitle": "写的真好",
+            "commentContent": "尤其是第一章",
+            "commentStick": true,
+            "commentEssence": true,
+            "updateTime": "2017-5-2"
+        },
+        {
+            "userName": "新新",
+            "commentTitle": "非常喜欢作者",
+            "commentContent": "我从小就看她的作品",
+            "commentStick": true,
+            "commentEssence": false,
+            "updateTime": "2017-5-2"
+        },
+        {
+            "userName": "毛毛",
+            "commentTitle": "一直在看",
+            "commentContent": "我特别喜欢三毛的作品",
+            "commentStick": true,
+            "commentEssence": false,
+            "updateTime": "2017-5-2"
+        }
+    ]
+}

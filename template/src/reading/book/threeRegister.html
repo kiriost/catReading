@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=0.36,user-scalable=no,minimal-ui">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" href="../../../../static/src/css/reset.css">
+		<link rel="stylesheet" href="../../../../static/src/css/register.css">
+		<title>注册</title>
+	</head>
+	<body>
+		<div class="header">
+			<a href="#" class="headerLeft"><img src="../../../../static/src/img/icon/loginArrow.jpg" onclick="javascript:history.back(-1)";></a>
+			<a href="#" class="headerMiddle">用户注册</a>
+			<a href="#" class="headerRight"><img src="./../../../../static/src/img/icon/successHome.jpg" style="vertical-align: middle;"></a>
+		</div>
+		<div class="middle">
+			<div class="content" id="content">	
+				<div class="para reg-plan-div">
+			        <div class="reg-plan-map">
+			            <i class="i0 active">•</i>
+			            <span class="sp0 active"></span>
+			            <i class="i1 active">•</i>
+			            <span class="sp1 active"></span>
+			            <i class="i2 active">•</i>
+			        </div>
+			        <div class="reg-plan-text">
+			            <span class="spt0 active">填写手机号</span>
+			            <span class="spt1 active">填写用户名</span>
+			            <span class="spt2 active">成功</span>
+			        </div>
+			    </div>
+				<div class="gougou"><img src="./../../../../static/src/img/icon/successAgree.jpg"></div>
+				<div class="compeleteRegister"><span class="registerName">zy</span>, 欢迎您成为猫阅读的一员，猫阅读将竭诚为您提供最优质的服务！</div>
+				<a href="login.html" class="autoSkip">1秒后自动跳转至原页面 >></a>
+			</div>
+			<!-- content结束 -->
+		</div>
+		<!-- middle结束 -->
+	</body>
+	<script src="../../../../static/src/js/lib/zepto.min.js"></script>
+	<script>
+		var choose = $('.chooseleft');
+		var loginYes = $('.loginYes');
+		var loginNo = $('.loginNo');
+		choose.click(function(){
+			loginYes.toggle();
+			loginNo.toggle();
+			})
+	</script>

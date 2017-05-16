@@ -1,0 +1,55 @@
+{
+	"chaptersNumber": 210,
+	"bookName": "西游记",
+	"chapterList": [{
+			"chapterId": 1,
+			"chaptersName": "灵根育孕源流出　心性修持大道生",
+			"chaptersType": 0
+		},
+		{
+			"chapterId": 2,
+			"chaptersName": "悟彻菩提真妙理　断魔归本合元神",
+			"chaptersType": 0
+		},
+		{
+			"chapterId": 3,
+			"chaptersName": "四海千山皆拱伏　九幽十类尽除名",
+			"chaptersType": 0
+		},
+		{
+			"chapterId": 4,
+			"chaptersName": "官封弼马心何足　名注齐天意未宁",
+			"chaptersType": 0
+		},
+		{
+			"chapterId": 5,
+			"chaptersName": "乱蟠桃大圣偷丹　反天宫诸神捉怪",
+			"chaptersType": 0
+		},
+		{
+			"chapterId": 6,
+			"chaptersName": "观音赴会问原因　小圣施威降大圣",
+			"chaptersType": 1
+		},
+		{
+			"chapterId": 7,
+			"chaptersName": "灵根育孕源流出　心性修持大道生",
+			"chaptersType": 1
+		},
+		{
+			"chapterId": 8,
+			"chaptersName": "八卦炉中逃大圣　五行山下定心猿",
+			"chaptersType": 1
+		},
+		{
+			"chapterId": 9,
+			"chaptersName": "我佛造经传极乐　观音奉旨上长安",
+			"chaptersType": 1
+		},
+		{
+			"chapterId": 10,
+			"chaptersName": "陈光蕊赴任逢灾　江流僧复仇报本",
+			"chaptersType": 1
+		}
+	]
+}
